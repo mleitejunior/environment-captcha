@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="btnDisabled()">
+
+    <div class="wrap">
+
+        <div class="menu">
+            <i id="menuIcon" class="fas fa-bars"></i>
+            <div id="menu" class="hidden">
+                <div class="rectangle"></div>
+                <div id="menuOption" class="menuOption">
+                    <ul>
+                        <li>Separator Effect
+                            <i id="toggleAnimation1" class="fas fa-toggle-on"></i>
+                        </li>
+                        <li>Edge Effect
+                            <i id="toggleAnimation2" class="fas fa-toggle-on"></i>
+                        </li>
+                        <li>Theme
+                            <i id="toggleAnimation3" class="fas fa-toggle-on"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /menu -->
+
+        <form id="form">
+
+            <h2 id="title" class="title-paused">Login Screen</h2>
+
+            <!-- E-mail -->
+            <div id="eDiv" class="field input" onmouseover="onMouseOvereIcon()" onmouseout="onMouseOuteIcon()">
+                <i id="eIcon" class="far fa-envelope pull-left-icon"></i>
+                <input id="email" type="text" class="input email" placeholder="E-mail" maxlength="30" autocomplete="off" required>
+            </div>
+
+            <!-- Password -->
+            <div id="pwDiv"	class="field input" onmouseover="onMouseOverpwIcon()" onmouseout="onMouseOutpwIcon()">
+                <i id="pwIcon" class="fas fa-lock pull-left-icon"></i>
+                <input id="pw" type="password" class="input pw" placeholder="Password" minlength="8" maxlength="18" autocomplete="off" required>
+                <i id="eye-pw" class="far fa-eye eye-pw"></i>
+            </div>
+
+            <!-- Captcha -->
+            <div class="field captcha">
+                <span id="toggle" value="0">
+                    <i id="toggleIcon" class="fas fa-toggle-on toggle-off"></i>
+                </span>
+                <p><label id="math" for="calc"></label></p>
+                <div class="option">
+                    <input type="text" id="calc" maxlength="2" placeholder="Result" onchange="calcMath()" required>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <input href="#sign-up" type="button" value="Sign Up" class="btn signup">
+                <input id="btnSignIn" type="submit" value="Sign In" class="btn signin">
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <span class="account">Don't have an account yet?</span> <span class="click-here">Click here!</span>
+            </div>
+
+        </form>
+        <!-- /form -->
+
+    </div>
+    <!-- /wrap -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
